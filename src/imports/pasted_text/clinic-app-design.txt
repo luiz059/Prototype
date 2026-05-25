@@ -1,0 +1,273 @@
+TASK
+
+Design a professional high-fidelity mobile application UI in Figma for a Clinic / Medical Appointment System. The output must look like a real modern healthcare mobile app used by clinics, hospitals, or telemedicine services — not a website and not a generic student project.
+
+The design should focus on:
+
+Appointment scheduling
+Patient records
+Doctor availability
+Notifications
+Medical history
+
+The app must demonstrate strong UI/UX structure, logical mobile navigation flow, and production-level mobile app design thinking.
+
+CONTEXT
+
+This is an academic system proposal and wireframe prototype project. The platform is strictly a mobile application UI, not a desktop website.
+
+The goal is to create:
+
+A believable healthcare mobile experience
+Clean and modern healthcare UI
+Consistent mobile app layouts
+Realistic user flow
+Professional mobile components
+
+The app should feel similar to:
+
+KonsultaMD
+NowServing
+Practo
+HealthNow
+modern telemedicine applications
+
+The interface must prioritize:
+
+Accessibility
+Simplicity
+Readability
+Fast navigation
+Trust and professionalism
+
+The final output should immediately look like a deployable healthcare app concept.
+
+EXEMPLARS
+Design Style References
+
+Use inspiration from:
+
+Apple Health
+Google Material mobile healthcare apps
+Modern telemedicine apps
+Minimal Scandinavian healthcare UI
+Clean card-based mobile interfaces
+UI Characteristics
+Soft shadows
+Rounded cards
+Clean spacing
+Minimal clutter
+Strong typography hierarchy
+Calm medical color palette
+Mobile-first component system
+Expected Visual Direction
+
+The app should visually communicate:
+
+reliability
+safety
+professionalism
+ease of use
+organized medical workflows
+PERSONA
+
+You are a senior mobile product designer and healthcare UX architect specializing in telemedicine and clinic management applications.
+
+You design interfaces that balance:
+
+usability
+healthcare accessibility
+patient trust
+clean mobile interactions
+scalable app systems
+
+You think like a real startup product team creating a production-ready healthcare app prototype.
+
+FORMAT
+
+Create a complete high-fidelity mobile app design system in Figma containing the following mobile screens:
+
+AUTHENTICATION FLOW
+Splash Screen
+Onboarding Screens
+Login Screen
+Register Screen
+Forgot Password Screen
+MAIN APPLICATION FLOW
+HOME DASHBOARD
+
+Include:
+
+greeting header
+upcoming appointment card
+quick actions
+doctor categories
+notifications preview
+search bar
+APPOINTMENT BOOKING FLOW
+
+Screens:
+
+Doctor List
+Doctor Details
+Doctor Availability Calendar
+Appointment Scheduling
+Appointment Confirmation
+
+Must include:
+
+available time slots
+doctor specialization
+ratings/reviews
+consultation type
+clinic information
+PATIENT RECORDS MODULE
+
+Include:
+
+patient profile
+personal information
+uploaded documents
+prescriptions
+lab results
+MEDICAL HISTORY MODULE
+
+Include:
+
+previous consultations
+diagnosis history
+medications
+treatment timeline
+NOTIFICATION SYSTEM
+
+Include:
+
+appointment reminders
+prescription reminders
+schedule updates
+push notification center
+USER PROFILE SETTINGS
+
+Include:
+
+edit profile
+security settings
+saved clinics/doctors
+logout
+NAVIGATION SYSTEM
+
+Use a professional mobile navigation structure:
+
+Bottom navigation bar
+OR
+Hybrid tab navigation
+
+Navigation tabs may include:
+
+Home
+Appointments
+Records
+Notifications
+Profile
+DESIGN REQUIREMENTS
+
+The mobile UI must demonstrate:
+
+clear navigation
+consistent layout system
+proper UI placement
+readable typography
+user-friendly interactions
+logical screen flow
+accessibility-aware design
+healthcare-focused UX
+HCI / UI-UX PRINCIPLES TO APPLY
+
+Apply real Human-Computer Interaction principles:
+
+visibility of system status
+consistency and standards
+recognition over recall
+minimalist design
+user control and freedom
+error prevention
+accessibility and readability
+efficient mobile interactions
+COMPONENT REQUIREMENTS
+
+Create reusable mobile UI components:
+
+buttons
+input fields
+doctor cards
+appointment cards
+bottom navigation
+notification cards
+schedule calendar
+medical record cards
+
+All components must be visually consistent.
+
+MOBILE DESIGN SPECIFICATIONS
+
+Platform:
+
+Mobile app only
+
+Recommended frame size:
+
+iPhone 14 Pro
+OR
+390x844 mobile frame
+
+Design Style:
+
+Modern healthcare SaaS
+Minimal
+Professional
+Production-level
+Realistic spacing and hierarchy
+COLOR SYSTEM
+
+Suggested palette:
+
+White / Off-white backgrounds
+Medical blue
+Soft teal
+Light gray
+Minimal accent colors
+
+Avoid:
+
+overly saturated colors
+gaming aesthetics
+neon palettes
+cluttered layouts
+TYPOGRAPHY
+
+Use:
+
+clean sans-serif fonts
+strong visual hierarchy
+readable labels
+accessible text sizes
+FINAL OUTPUT EXPECTATION
+
+The final result should:
+
+look like a real mobile healthcare startup app
+feel production-ready
+be presentation-worthy
+demonstrate complete app flow
+contain realistic mobile UX
+look significantly above normal student-level output
+
+Avoid:
+
+generic templates
+empty placeholder layouts
+website-like structures
+inconsistent mobile screens
+unrealistic UI spacing
+
+The design must feel like a polished healthcare mobile application concept created by a professional product design team.

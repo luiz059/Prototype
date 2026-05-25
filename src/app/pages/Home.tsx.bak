@@ -1,0 +1,116 @@
+import { useNavigate } from "react-router";
+import { Bell, Search, Calendar, FileText, Activity, MessageSquare, ChevronRight, Star } from "lucide-react";
+import { motion } from "motion/react";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+
+export function Home() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="flex flex-col min-h-full pb-6">
+      {/* Header */}
+      <div className="bg-[#1A73E8] rounded-b-[32px] px-6 pt-12 pb-8 text-white relative shadow-md shadow-blue-500/10">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <p className="text-white/80 text-sm font-medium mb-1">Good morning</p>
+            <h1 className="text-2xl font-bold">John Doe</h1>
+          </div>
+          <div className="flex items-center gap-3">
+            <button className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center relative">
+              <Bell className="w-5 h-5 text-white" />
+              <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 rounded-full border border-[#1A73E8]"></span>
+            </button>
+            <div className="w-12 h-12 rounded-full border-2 border-white/20 overflow-hidden bg-white/10 flex items-center justify-center font-bold">
+              JD
+            </div>
+          </div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="relative z-10 translate-y-2">
+          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="text"
+            className="block w-full h-14 pl-11 pr-4 bg-white text-gray-900 rounded-2xl border-0 shadow-lg shadow-black/5 ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#1A73E8] sm:text-sm sm:leading-6"
+            placeholder="Search doctors, clinics, conditions..."
+          />
+        </div>
+      </div>
+
+      <div className="px-6 mt-10">
+        {/* Quick Actions */}
+        <div className="flex justify-between items-start mb-8 gap-2">
+          <QuickAction icon={Calendar} label="Book" color="bg-blue-100 text-blue-600" onClick={() => navigate("/app/doctors")} />
+          <QuickAction icon={FileText} label="Records" color="bg-teal-100 text-teal-600" onClick={() => navigate("/app/records")} />
+          <QuickAction icon={Activity} label="Results" color="bg-purple-100 text-purple-600" />
+          <QuickAction icon={MessageSquare} label="Chats" color="bg-orange-100 text-orange-600" />
+        </div>
+
+        {/* Upcoming Appointment */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold text-[#1A1A2E]">Upcoming Visit</h2>
+            <button className="text-[#1A73E8] text-sm font-medium">See all</button>
+          </div>
+          <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div className="flex gap-4 items-center mb-4">
+              <div className="w-14 h-14 bg-blue-50 rounded-full flex-shrink-0 overflow-hidden">
+                 <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=200&h=200&auto=format&fit=crop" alt="Dr" className="w-full h-full object-cover" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-[#1A1A2E] text-base">Dr. Sarah Jenkins</h3>
+                <p className="text-[#6B7280] text-sm">Cardiologist</p>
+              </div>
+              <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#1A73E8]">
+                <MessageSquare className="w-5 h-5" />
+              </div>
+            </div>
+            
+            <div className="bg-[#F8FAFC] rounded-xl p-3 flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2 text-[#1A1A2E] text-sm font-medium">
+                <Calendar className="w-4 h-4 text-[#1A73E8]" />
+                Today, 10:30 AM
+              </div>
+              <span className="bg-blue-100 text-[#1A73E8] px-2 py-1 rounded text-xs font-semibold">Confirmed</span>
+            </div>
+
+            <div className="flex gap-3">
+              <button className="flex-1 py-2.5 bg-gray-100 text-[#1A1A2E] text-sm font-medium rounded-xl">Cancel</button>
+              <button className="flex-1 py-2.5 bg-[#1A73E8] text-white text-sm font-medium rounded-xl shadow-md shadow-blue-500/20">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories */}
+        <div className="mb-8 -mx-6">
+          <div className="flex items-center justify-between mb-4 px-6">
+            <h2 className="text-lg font-bold text-[#1A1A2E]">Specialists</h2>
+          </div>
+          <div className="flex overflow-x-auto hide-scrollbar px-6 gap-3 pb-2">
+            {["General", "Cardiology", "Dentist", "Pediatrics", "Eye Care"].map((category, i) => (
+              <button
+                key={i}
+                className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 whitespace-nowrap shadow-sm hover:border-[#1A73E8] hover:text-[#1A73E8] transition-colors"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function QuickAction({ icon: Icon, label, color, onClick }: any) {
+  return (
+    <div className="flex flex-col items-center gap-2 cursor-pointer" onClick={onClick}>
+      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${color} shadow-sm`}>
+        <Icon className="w-6 h-6" />
+      </div>
+      <span className="text-xs font-medium text-[#1A1A2E]">{label}</span>
+    </div>
+  );
+}

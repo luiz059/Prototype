@@ -1,0 +1,21 @@
+/* Custom utilities */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) {
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
