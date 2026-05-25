@@ -332,7 +332,6 @@ export function Records() {
           </button>
           <div>
             <h1 className="text-xl font-bold leading-tight">My Health Records</h1>
-            <p className="text-blue-200 text-xs mt-0.5">Barangay Health Services</p>
           </div>
         </div>
 
