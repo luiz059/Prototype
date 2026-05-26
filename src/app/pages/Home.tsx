@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { Bell, Search, Calendar, FileText, Activity, MessageSquare, ChevronRight, Star, MapPin } from "lucide-react";
 import { motion } from "motion/react";
+import myProfileImg from "../../uploads/my-profile.jpg";
 
 const recommendedDoctors = [
   {
@@ -54,7 +55,7 @@ export function Home() {
               <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-400 rounded-full border-2 border-[#1A73E8]"></span>
             </button>
             <div className="w-12 h-12 rounded-full border-2 border-white/30 overflow-hidden">
-              <img src="src/uploads/my-profile.jpg" alt="User" className="w-full h-full object-cover" />
+              <img src={myProfileImg} alt="User" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

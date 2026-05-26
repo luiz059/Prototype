@@ -7,6 +7,7 @@ import {
   FileText, Headphones, ChevronUp, AlertCircle, ExternalLink
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import myProfileImg from "../../uploads/my-profile.jpg";
 
 /* ─── static data ─────────────────────────────────────────────── */
 const savedDoctors = [
@@ -65,7 +66,7 @@ export function Profile() {
       <div className="px-6 py-8 bg-white border-b border-gray-100 flex flex-col items-center text-center">
         <div className="w-24 h-24 rounded-full border-4 border-blue-50 bg-gray-100 overflow-hidden mb-4 relative group cursor-pointer">
           <img
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&h=200&auto=format&fit=crop"
+            src={myProfileImg}
             alt="User"
             className="w-full h-full object-cover"
           />
@@ -126,7 +127,7 @@ export function Profile() {
         <div className="space-y-4">
           <div className="flex flex-col items-center mb-6">
             <div className="w-20 h-20 rounded-full bg-gray-100 overflow-hidden mb-3 relative group cursor-pointer">
-              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&h=200&auto=format&fit=crop" alt="User" className="w-full h-full object-cover" />
+              <img src={myProfileImg} alt="User" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <Camera className="w-5 h-5 text-white" />
               </div>
