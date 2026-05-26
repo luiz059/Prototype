@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { useNavigate } from "react-router";
 import {
   FileText, Activity, Syringe, FileStack, Download,
-  ChevronLeft, Search, X, ChevronRight,
+  ChevronLeft, Search, X, ChevronRight, CheckCircle2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -93,6 +93,12 @@ function CategorySheet({
   const [search, setSearch]           = useState("");
   const [filterStatus, setFilterStatus] = useState<"All" | RecordItem["status"]>("All");
   const [selectedRecord, setSelectedRecord] = useState<RecordItem | null>(null);
+  const [downloadedFile, setDownloadedFile] = useState<string | null>(null);
+
+  const handleDownload = (id: string) => {
+    setDownloadedFile(id);
+    setTimeout(() => setDownloadedFile(null), 2000);
+  };
 
   const records = CATEGORY_RECORDS[title] ?? [];
 
@@ -261,12 +267,27 @@ function CategorySheet({
                       <p className="text-xs text-gray-500 font-medium mb-1">Notes</p>
                       <p className="text-sm text-[#1A1A2E]">{selectedRecord.notes}</p>
                     </div>
-                    <button
-                      onClick={() => setSelectedRecord(null)}
-                      className="w-full py-3 bg-[#1A73E8] text-white font-bold rounded-xl active:scale-[0.98] transition-transform shadow-md shadow-blue-500/20"
-                    >
-                      Done
-                    </button>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => handleDownload(selectedRecord.id)}
+                        className={`flex-1 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 border transition-all active:scale-95 ${
+                          downloadedFile === selectedRecord.id
+                            ? "bg-green-50 border-green-200 text-green-600"
+                            : "bg-white border-gray-200 text-gray-700"
+                        }`}
+                      >
+                        {downloadedFile === selectedRecord.id
+                          ? <><CheckCircle2 className="w-4 h-4" /> Saved!</>
+                          : <><Download className="w-4 h-4" /> Download</>
+                        }
+                      </button>
+                      <button
+                        onClick={() => setSelectedRecord(null)}
+                        className="flex-1 py-3 bg-[#1A73E8] text-white font-bold rounded-xl active:scale-[0.98] transition-transform shadow-md shadow-blue-500/20"
+                      >
+                        Done
+                      </button>
+                    </div>
                   </div>
                 </motion.div>
               </>
@@ -315,6 +336,12 @@ export function Records() {
   const navigate = useNavigate();
   const [activeSheet, setActiveSheet] = useState<string | null>(null);
   const [showAllFiles, setShowAllFiles] = useState(false);
+  const [downloadedFile, setDownloadedFile] = useState<string | null>(null);
+
+  const handleDownload = (name: string) => {
+    setDownloadedFile(name);
+    setTimeout(() => setDownloadedFile(null), 2000);
+  };
 
   const activeCategory = CATEGORIES.find(c => c.title === activeSheet);
 
@@ -331,8 +358,7 @@ export function Records() {
             <ChevronLeft className="w-5 h-5" />
           </button>
           <div>
-            <h1 className="text-xl font-bold leading-tight">My Health Records</h1>
-          </div>
+            <h1 className="text-xl font-bold leading-tight">My Health Records</h1>          </div>
         </div>
 
         {/* Patient card — unchanged from original */}
@@ -340,7 +366,7 @@ export function Records() {
           <div className="flex justify-between items-center mb-4 border-b border-white/20 pb-4">
             <div>
               <p className="text-white/80 text-xs mb-1">Patient Name</p>
-              <p className="font-bold">John Doe</p>
+              <p className="font-bold">Luiz Andrew Reyes</p>
             </div>
             <div className="text-right">
               <p className="text-white/80 text-xs mb-1">Age</p>
@@ -429,8 +455,17 @@ export function Records() {
                       <p className="text-xs text-gray-500">{file.date} · {file.size}</p>
                     </div>
                   </div>
-                  <button className="w-10 h-10 rounded-full bg-blue-50 text-[#1A73E8] flex items-center justify-center active:scale-90 transition-transform hover:bg-blue-100">
-                    <Download className="w-5 h-5" />
+                  <button
+                    onClick={() => handleDownload(file.name)}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-all ${
+                      downloadedFile === file.name
+                        ? "bg-green-100 text-green-600"
+                        : "bg-blue-50 text-[#1A73E8] hover:bg-blue-100"
+                    }`}>
+                    {downloadedFile === file.name
+                      ? <CheckCircle2 className="w-5 h-5" />
+                      : <Download className="w-5 h-5" />
+                    }
                   </button>
                 </motion.div>
               ))}

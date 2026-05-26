@@ -73,8 +73,8 @@ export function Profile() {
             <Camera className="w-6 h-6 text-white" />
           </div>
         </div>
-        <h1 className="text-xl font-bold text-[#1A1A2E] mb-1">John Doe</h1>
-        <p className="text-[#6B7280] text-sm mb-4">john.doe@example.com</p>
+        <h1 className="text-xl font-bold text-[#1A1A2E] mb-1">Luiz Andrew Reyes</h1>
+        <p className="text-[#6B7280] text-sm mb-4">luiz.reyes@example.com</p>
         <button
           onClick={() => setShowEditProfile(true)}
           className="px-6 py-2 bg-blue-50 text-[#1A73E8] font-semibold text-sm rounded-full active:scale-95 transition-transform"
@@ -134,11 +134,11 @@ export function Profile() {
             <p className="text-sm text-gray-500">Tap to change photo</p>
           </div>
 
-          <InputField icon={User} label="Full Name" defaultValue="John Doe" />
-          <InputField icon={Mail} label="Email" defaultValue="john.doe@example.com" type="email" />
+          <InputField icon={User} label="Full Name" defaultValue="Luiz Andrew Reyes" />
+          <InputField icon={Mail} label="Email" defaultValue="luiz.reyes@example.com" type="email" />
           <InputField icon={Phone} label="Phone" defaultValue="+63 912 345 6789" type="tel" />
           <InputField icon={Calendar} label="Date of Birth" defaultValue="1990-05-15" type="date" />
-          <InputField icon={MapPin} label="Address" defaultValue="123 Quezon Ave, Quezon City" />
+          <InputField icon={MapPin} label="Address" defaultValue="568 Mayor's Drive, Cavite City" />
 
           <AnimatePresence>
             {savedProfile && (

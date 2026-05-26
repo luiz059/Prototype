@@ -133,19 +133,9 @@ export function DoctorProfile() {
             ))}
           </div>
           
-          <h3 className="font-bold text-[#1A1A2E] text-base mb-4">Consultation Type</h3>
+          <h3 className="font-bold text-[#1A1A2E] text-base mb-4"></h3>
           <div className="flex gap-4 p-1 bg-gray-100 rounded-xl mb-4">
-            {["In-Clinic", "Telemedicine"].map(t => (
-              <button
-                key={t}
-                onClick={() => setType(t)}
-                className={`flex-1 py-2 text-sm font-medium rounded-lg ${
-                  type === t ? "bg-white text-[#1A1A2E] shadow-sm" : "text-gray-500"
-                }`}
-              >
-                {t}
-              </button>
-            ))}
+           
           </div>
         </div>
       </div>

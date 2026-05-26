@@ -46,7 +46,7 @@ export function Home() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <p className="text-white/70 text-sm font-medium mb-1">Good morning!</p>
-            <h1 className="text-2xl font-bold">John Doe</h1>
+            <h1 className="text-2xl font-bold">Luiz Andrew Reyes</h1>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={() => navigate("/app/notifications")} className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center relative">
@@ -54,7 +54,7 @@ export function Home() {
               <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-400 rounded-full border-2 border-[#1A73E8]"></span>
             </button>
             <div className="w-12 h-12 rounded-full border-2 border-white/30 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&h=200&auto=format&fit=crop" alt="User" className="w-full h-full object-cover" />
+              <img src="src/uploads/my-profile.jpg" alt="User" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
