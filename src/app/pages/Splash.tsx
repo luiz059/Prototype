@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import { Activity } from "lucide-react";
 import { motion } from "motion/react";
+import logoImg from "../../uploads/careconnect-logo.png";
 
 export function Splash() {
   const navigate = useNavigate();
@@ -21,9 +21,7 @@ export function Splash() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="flex flex-col items-center"
       >
-        <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-          <Activity className="w-10 h-10 text-[#1A73E8]" />
-        </div>
+        <img src={logoImg} alt="CareConnect Logo" className="w-36 h-36 object-contain mb-6" />
         <h1 className="text-3xl font-bold tracking-tight mb-2">CareConnect</h1>
         <p className="text-white/80 font-medium">Your Health, Our Priority</p>
       </motion.div>

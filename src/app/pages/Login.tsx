@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Eye, EyeOff, Activity } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
+import logoImg from "../../uploads/careconnect-logo.png";
 
 export function Login() {
   const navigate = useNavigate();
@@ -9,9 +10,7 @@ export function Login() {
   return (
     <div className="flex flex-col w-full h-full bg-white px-6 pt-16 pb-8 overflow-y-auto">
       <div className="flex items-center gap-2 mb-10 text-[#1A73E8]">
-        <div className="w-10 h-10 bg-[#1A73E8] rounded-xl flex items-center justify-center">
-          <Activity className="w-6 h-6 text-white" />
-        </div>
+        <img src={logoImg} alt="CareConnect Logo" className="w-10 h-10 object-contain" />
         <span className="text-xl font-bold text-[#1A1A2E]">CareConnect</span>
       </div>
 
