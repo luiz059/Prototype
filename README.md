@@ -14,16 +14,16 @@ A mobile-first healthcare app prototype built with React, TypeScript, and Tailwi
 
 ## Features
 
-- 🏠 **Home** — health stats, quick actions, top doctors
-- 📅 **Appointments** — book, cancel, reschedule with full flow
-- 👨‍⚕️ **Doctor List** — search, filter by specialty, availability
-- 👤 **Doctor Profile** — ratings, schedule, booking
-- 🗓️ **Appointment Scheduling** — 2-step flow with payment
-- 📋 **Medical History** — timeline, medications, diagnoses
-- 🗂️ **Records** — lab results, prescriptions, documents
-- 🔔 **Notifications** — alerts and updates
-- 💬 **Messages** — doctor chat
-- 👤 **Profile** — settings, security, saved doctors
+-  **Home** — health stats, quick actions, top doctors
+-  **Appointments** — book, cancel, reschedule with full flow
+-  **Doctor List** — search, filter by specialty, availability
+-  **Doctor Profile** — ratings, schedule, booking
+-  **Appointment Scheduling** — 2-step flow with payment
+-  **Medical History** — timeline, medications, diagnoses
+-  **Records** — lab results, prescriptions, documents
+- **Notifications** — alerts and updates
+- **Messages** — doctor chat
+- **Profile** — settings, security, saved doctors
 
 ## Getting Started
 
