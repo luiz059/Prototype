@@ -61,7 +61,7 @@ export function Register() {
         </div>
 
         <button
-          onClick={() => navigate("/app")}
+          onClick={() => navigate("/login")}
           className="w-full h-14 bg-[#1A73E8] text-white rounded-xl font-medium text-base active:scale-[0.98] transition-transform shadow-md shadow-blue-500/20 mb-6"
         >
           Register
