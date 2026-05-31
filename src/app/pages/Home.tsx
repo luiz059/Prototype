@@ -96,7 +96,7 @@ export function Home() {
 
         {/* ── Quick Actions ── */}
         <div className="grid grid-cols-4 gap-2">
-          <QuickAction icon={Calendar}    label="Book"      color="bg-blue-100 text-[#1A73E8]"  onClick={() => navigate("/app/schedule")} />
+          <QuickAction icon={Calendar}    label="Book"      color="bg-blue-100 text-[#1A73E8]"  onClick={() => navigate("/app/doctors")} />
           <QuickAction icon={FileText}    label="Records"   color="bg-teal-100 text-teal-600"   onClick={() => navigate("/app/records")} />
           <QuickAction icon={Activity}    label="History"   color="bg-purple-100 text-purple-600" onClick={() => navigate("/app/history")} />
           <QuickAction icon={MessageSquare} label="Messages" color="bg-orange-100 text-orange-500" onClick={() => navigate("/app/messages")} />
